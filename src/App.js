@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import DrawerAppBar from './component/AppBar/appBar';
+// import Navbar from './component/Navbar/navbar';
+import TypographyLand from './component/Typography/typography';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Navbar/> */}
+      <DrawerAppBar sx={{display: {sm: 'none'}}}/>
+      <TypographyLand />
     </div>
   );
 }
