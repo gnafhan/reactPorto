@@ -16,7 +16,18 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Home', 'About', 'Projects', 'Skills', 'Contact'];
+const navItemsSx = {
+  color: '#fff',
+   fontFamily: "'Poppins', sans-serif",
+    marginLeft: '20px',
+     textTransform: 'capitalize',
+      fontWeight:400,
+  "&:hover": {
+    color: '#6366F1',
+  }
+
+}
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -28,14 +39,14 @@ function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2, color: '#6366F1' }} >
+      <Typography variant="h6" sx={{ my: 2, color: '#6366F1', fontFamily: "'Pacifico', sans-serif" }} >
         GN;
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) =>  (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton sx={{ textAlign: 'center', fontFamily: "'Poppins', sans-serif" }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -47,7 +58,7 @@ function DrawerAppBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box position="sticky" sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="absolute" edge="end" component="nav" style={{right: 0, backgroundColor: '#18181B', textAlign: 'left', boxShadow: 'none' }}>
         <Toolbar>
@@ -65,11 +76,11 @@ function DrawerAppBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: "#6366F1", fontSize: "30px", fontFamily:"'Pacifico', sans-serif"  }}
           >
-            GN<span style={{ fontFamily:'Roboto'}}>;</span>
+            GN<span style={{ fontFamily:''}}>;</span>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} sx={navItemsSx}>
                 {item}
               </Button>
             ))}
