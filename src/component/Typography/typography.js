@@ -5,7 +5,7 @@ import * as React from 'react';
 
 
 const sizeFont = {
-  fontSize: { xs: '30px',sm: '48px',   md: "48px", lg: "48px"},
+  fontSize: { xs: '30px',sm: '48px',   md: "48px", lg: "60px"},
   textAlign: { xs: 'center', sm: "center"},
   marginLeft: { xs: '20px'},
   marginRight: { xs: '20px'},
@@ -21,8 +21,8 @@ const paddington = {
   color: '#c7cad1',
   fontWeight:"normal",
   textAlign: {xs: 'left', sm: 'center'},
-  paddingLeft: {xs: '40px',sm: "8%", md: "17%", lg: "23%"},
-  paddingRight: {xs: '40px',sm:"8%",  md: "17%", lg: "23%"},
+  paddingLeft: {xs: '40px',sm: "8%", md: "17%", lg: "20%"},
+  paddingRight: {xs: '40px',sm:"8%",  md: "17%", lg: "20%"},
   paddingTop: {xs: '20px',sm: "0"},  
   lineHeight:"28px",
   align: 'center',
@@ -56,7 +56,7 @@ function TypographyLand() {
     </Typography>
     </Box>
     <Typography variant="h3" fontFamily="'Inter', sans-serif" sx={paddington}>
-    I'm a front-end web developer specializing in building user interfaces using popular frameworks like React and Vue and occasionally designing with figma. Currently, I'm focused on building responsive front-end web applications while learning back-end technologies.
+    Hello! I am an experienced backend developer skilled in developing and managing systems behind the scenes of applications or websites. I have the ability to write efficient, responsible, and easily understandable code for my team. In my portfolio, you can see some of the projects I have worked on. These projects include web application development, system management, and system performance optimization.
     </Typography>
 
       </Box>

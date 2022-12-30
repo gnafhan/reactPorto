@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  scroll-behavior:smooth;
+  background-color: #18181B;
 }
 .check{
   color: #6366F1 ;

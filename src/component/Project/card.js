@@ -5,11 +5,15 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import LinkIcon from '@mui/icons-material/Link';
 
 const cardSx = {
     maxWidth: 345,
     display:'inline-block',
-    margin: '20px'
+    margin: '20px',
+    border: '5px solid',
+    borderColor: '#6366F1',
+    borderRadius: '10px',
 }
 
 export default function MediaCard(props) {
@@ -28,8 +32,8 @@ export default function MediaCard(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small"><img height="40px" width="40px" src="/github.png"/></Button>
+        <Button size="small"><LinkIcon/></Button>
       </CardActions>
     </Card>
   );

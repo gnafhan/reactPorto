@@ -17,7 +17,7 @@ function Project () {
     return (
         <Box backgroundColor="#18181B">
             <Box>
-                <Typography sx={tySx} color="#6366F1" marginTop="-5px">
+                <Typography sx={tySx} color="#6366F1" marginTop="5px">
                     PROJECTS
                 </Typography>    
             </Box>    
