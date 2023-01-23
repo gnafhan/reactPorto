@@ -14,6 +14,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Link } from "react-scroll";
+
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Projects', 'Skills', 'Contact'];
@@ -38,15 +40,16 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box id="Home" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2, color: '#6366F1', fontFamily: "'Pacifico', sans-serif" }} >
         GN;
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) =>  (
+
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center', fontFamily: "'Poppins', sans-serif" }}>
+            <ListItemButton href={`#${item}`} sx={{ textAlign: 'center', fontFamily: "'Poppins', sans-serif" }}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -74,21 +77,32 @@ function DrawerAppBar(props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: "#6366F1", fontSize: "30px", fontFamily:"'Pacifico', sans-serif"  }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: "#6366F1  ", fontSize: "30px", fontFamily:"'Pacifico', sans-serif"  }}
           >
             GN<span style={{ fontFamily:''}}>;</span>
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: 'none', sm: 'block', color: '#FFFFF0' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={navItemsSx}>
+              <Link
+              activeClass="active"
+              to={item}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              >
+              
+              <Button scroll-behavior="smooth" scrollBehavior="smooth" href={`#${item}`}  key={item} sx={navItemsSx}>
                 {item}
               </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>
       </AppBar>
       <Box component="nav" color="#0A1929">
         <Drawer
+          backgroundColor="#18181B"
           container={container}
           variant="temporary"
           open={mobileOpen}
@@ -98,7 +112,8 @@ function DrawerAppBar(props) {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#18181B', color: '#FFFFF0' },
+            backgroundColor:"#18181B"
           }}
         >
           {drawer}

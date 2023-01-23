@@ -15,11 +15,14 @@ const boxSx = {
 
 function Project () {
     return (
-        <Box backgroundColor="#18181B">
-            <Box>
+        <Box scrollBehavior='smooth' id="Projects" backgroundColor="#18181B">
+            <Box >
+                <div data-aos-duration="1000" data-aos="fade-up">
+
                 <Typography sx={tySx} color="#6366F1" marginTop="5px">
                     PROJECTS
                 </Typography>    
+                </div>
             </Box>    
             <Box>
                 <Box sx={boxSx}>
